@@ -1,0 +1,181 @@
+package
+{
+	public class Testconfig
+	{
+		public function Testconfig()
+		{
+			
+			//trace(JSON.stringify(config));
+		}
+		public static function getTestConfig():Object
+		{
+			var config:Object={};
+			config.row=5;
+			config.col=14;
+			config.w=15;
+			config.h=5;
+			var matrix:Array=[];
+			matrix[0]=[];
+			matrix[0][0]={'m':0,'w':1,'r':0,'c':0};
+			matrix[0][1]={'m':0,'w':1,'r':0,'c':1};
+			matrix[0][2]={'m':0,'w':1,'r':0,'c':2};
+			matrix[0][3]={'m':0,'w':1,'r':0,'c':3};
+			matrix[0][4]={'m':0,'w':1,'r':0,'c':4};
+			matrix[0][5]={'m':0,'w':1,'r':0,'c':5};
+			matrix[0][6]={'m':0,'w':1,'r':0,'c':6};
+			matrix[0][7]={'m':0,'w':1,'r':0,'c':7};
+			matrix[0][8]={'m':0,'w':1,'r':0,'c':8};
+			matrix[0][9]={'m':0,'w':1,'r':0,'c':9};
+			matrix[0][10]={'m':0,'w':1,'r':0,'c':10};
+			matrix[0][11]={'m':0,'w':1,'r':0,'c':11};
+			matrix[0][12]={'m':0,'w':1,'r':0,'c':12};
+			matrix[0][13]={'m':1,'w':2,'s':[
+				[{'w':2,'r':0,'c':13}],
+				[{'w':1,'r':0,'c':13},{'w':1,'r':4,'c':9}]
+			]};
+			matrix[1]=[];
+			matrix[1][0]={'m':0,'w':1.5,'r':1,'c':0};
+			matrix[1][1]={'m':0,'w':1,'r':1,'c':1};
+			matrix[1][2]={'m':0,'w':1,'r':1,'c':2};
+			matrix[1][3]={'m':0,'w':1,'r':1,'c':3};
+			matrix[1][4]={'m':0,'w':1,'r':1,'c':4};
+			matrix[1][5]={'m':0,'w':1,'r':1,'c':5};
+			matrix[1][6]={'m':0,'w':1,'r':1,'c':6};
+			matrix[1][7]={'m':0,'w':1,'r':1,'c':7};
+			matrix[1][8]={'m':0,'w':1,'r':1,'c':8};
+			matrix[1][9]={'m':0,'w':1,'r':1,'c':9};
+			matrix[1][10]={'m':0,'w':1,'r':1,'c':10};
+			matrix[1][11]={'m':0,'w':1,'r':1,'c':11};
+			matrix[1][12]={'m':0,'w':1,'r':1,'c':12};
+			matrix[1][13]={'m':2,'w':1.5,'s':[
+				[{'w':1.5,'r':1,'c':13}],
+				[{'w':1.5,'r':1,'c':13,'n':1}]
+			]};
+			matrix[2]=[];
+			matrix[2][0]={'m':0,'w':1.75,'r':2,'c':0};
+			matrix[2][1]={'m':0,'w':1,'r':2,'c':1};
+			matrix[2][2]={'m':0,'w':1,'r':2,'c':2};
+			matrix[2][3]={'m':0,'w':1,'r':2,'c':3};
+			matrix[2][4]={'m':0,'w':1,'r':2,'c':4};
+			matrix[2][5]={'m':0,'w':1,'r':2,'c':5};
+			matrix[2][6]={'m':0,'w':1,'r':2,'c':6};
+			matrix[2][7]={'m':0,'w':1,'r':2,'c':7};
+			matrix[2][8]={'m':0,'w':1,'r':2,'c':8};
+			matrix[2][9]={'m':0,'w':1,'r':2,'c':9};
+			matrix[2][10]={'m':0,'w':1,'r':2,'c':10};
+			matrix[2][11]={'m':0,'w':1,'r':2,'c':11};
+			matrix[2][12]={'m':2,'w':2.25,'s':[
+				[{'w':2.25,'r':2,'c':13}],
+				[{'w':1,'r':2,'c':12},{'w':1.25,'r':2,'c':13}]
+			]};
+			matrix[3]=[];
+			matrix[3][0]={'m':3,'w':2.25,'s':[
+				[{'w':2.25,'r':3,'c':0}],
+				[{'w':1.25,'r':3,'c':0},{'w':1,'r':3,'c':1}]
+			]};
+			matrix[3][1]={'m':0,'w':1,'r':3,'c':2};
+			matrix[3][2]={'m':0,'w':1,'r':3,'c':3};
+			matrix[3][3]={'m':0,'w':1,'r':3,'c':4};
+			matrix[3][4]={'m':0,'w':1,'r':3,'c':5};
+			matrix[3][5]={'m':0,'w':1,'r':3,'c':6};
+			matrix[3][6]={'m':0,'w':1,'r':3,'c':7};
+			matrix[3][7]={'m':0,'w':1,'r':3,'c':8};
+			matrix[3][8]={'m':0,'w':1,'r':3,'c':9};
+			matrix[3][9]={'m':0,'w':1,'r':3,'c':10};
+			matrix[3][10]={'m':0,'w':1,'r':3,'c':11};
+			matrix[3][11]={'m':4,'w':2.75,'s':[
+				[{'w':2.75,'r':3,'c':13}],
+				[{'w':1,'r':3,'c':12},{'w':1.75,'r':3,'c':13}],
+				[{'w':1.75,'r':3,'c':13},{'w':1,'r':3,'c':12}]
+			]};
+			matrix[4]=[];
+			matrix[4][0]={'m':5,'w':15,'s':[
+				[{'w':1.25,'r':4,'c':0},{'w':1.25,'r':4,'c':1},{'w':1.25,'r':4,'c':2},{'w':6.25,'r':4,'c':4,'n':5},{'w':1.25,'r':4,'c':10},{'w':1.25,'r':4,'c':11},{'w':1.25,'r':4,'c':12},{'w':1.25,'r':4,'c':13}],
+				[{'w':1.5,'r':4,'c':0},{'w':1,'r':4,'c':1},{'w':1.5,'r':4,'c':2},{'w':7,'r':4,'c':4,'n':5},{'w':1.5,'r':4,'c':11},{'w':1,'r':4,'c':12},{'w':1.5,'r':4,'c':13}],
+				[{'w':1.5,'r':4,'c':0},{'w':1,'r':4,'c':1,'n':1},{'w':1.5,'r':4,'c':2},{'w':7,'r':4,'c':4,'n':5},{'w':1.5,'r':4,'c':11},{'w':1,'r':4,'c':12,'n':1},{'w':1.5,'r':4,'c':13}],
+				[{'w':1.5,'r':4,'c':0,'n':1},{'w':1,'r':4,'c':1},{'w':1.5,'r':4,'c':2},{'w':7,'r':4,'c':4,'n':5},{'w':1.5,'r':4,'c':11},{'w':1.5,'r':4,'c':12},{'w':1.5,'r':4,'c':13,'n':1}]
+			]};
+			config.matrix=matrix;
+			trace(JSON.stringify(config));
+			return config;
+		}
+		public static function getDefaultData():Object
+		{
+			var ret:Object={};
+			ret.split=[0,0,0,0,0];
+			var keymap:Array=[];
+			keymap[0]=[];
+			keymap[0][0]={'k':'KC_ESC'};
+			keymap[0][1]={'k':'KC_1'};
+			keymap[0][2]={'k':'KC_2'};
+			keymap[0][3]={'k':'KC_3'};
+			keymap[0][4]={'k':'KC_4'};
+			keymap[0][5]={'k':'KC_5'};
+			keymap[0][6]={'k':'KC_6'};
+			keymap[0][7]={'k':'KC_7'};
+			keymap[0][8]={'k':'KC_8'};
+			keymap[0][9]={'k':'KC_9'};
+			keymap[0][10]={'k':'KC_0'};
+			keymap[0][11]={'k':'KC_MINS'};
+			keymap[0][12]={'k':'KC_EQL'};
+			keymap[0][13]={'k':'KC_BSPC'};
+			
+			keymap[1]=[];
+			keymap[1][0]={'k':'KC_TAB'};
+			keymap[1][1]={'k':'KC_Q'};
+			keymap[1][2]={'k':'KC_W'};
+			keymap[1][3]={'k':'KC_E'};
+			keymap[1][4]={'k':'KC_R'};
+			keymap[1][5]={'k':'KC_T'};
+			keymap[1][6]={'k':'KC_Y'};
+			keymap[1][7]={'k':'KC_U'};
+			keymap[1][8]={'k':'KC_I'};
+			keymap[1][9]={'k':'KC_O'};
+			keymap[1][10]={'k':'KC_P'};
+			keymap[1][11]={'k':'KC_LBRC'};
+			keymap[1][12]={'k':'KC_RBRC'};
+			keymap[1][13]={'k':'KC_BSLS'};
+			
+			keymap[2]=[];
+			keymap[2][0]={'k':'KC_CAPS'};
+			keymap[2][1]={'k':'KC_A'};
+			keymap[2][2]={'k':'KC_S'};
+			keymap[2][3]={'k':'KC_D'};
+			keymap[2][4]={'k':'KC_F'};
+			keymap[2][5]={'k':'KC_G'};
+			keymap[2][6]={'k':'KC_H'};
+			keymap[2][7]={'k':'KC_J'};
+			keymap[2][8]={'k':'KC_K'};
+			keymap[2][9]={'k':'KC_L'};
+			keymap[2][10]={'k':'KC_SCLN'};
+			keymap[2][11]={'k':'KC_QUOT'};
+			keymap[2][12]={'k':'KC_ENT'};
+			
+			keymap[3]=[];
+			keymap[3][0]={'k':'KC_LSFT'};
+			keymap[3][1]={'k':'KC_Z'};
+			keymap[3][2]={'k':'KC_X'};
+			keymap[3][3]={'k':'KC_C'};
+			keymap[3][4]={'k':'KC_V'};
+			keymap[3][5]={'k':'KC_B'};
+			keymap[3][6]={'k':'KC_N'};
+			keymap[3][7]={'k':'KC_M'};
+			keymap[3][8]={'k':'KC_COMM'};
+			keymap[3][9]={'k':'KC_DOT'};
+			keymap[3][10]={'k':'KC_SLSH'};
+			keymap[3][11]={'k':'KC_RSFT'};
+			
+			keymap[4]=[];
+			keymap[4][0]={'k':'KC_LCTRL'};
+			keymap[4][1]={'k':'KC_LGUI'};
+			keymap[4][2]={'k':'KC_LALT'};
+			keymap[4][3]={'k':'KC_SPC'};
+			keymap[4][4]={'k':'KC_RALT'};
+			keymap[4][5]={'k':'KC_RGUI'};
+			keymap[4][6]={'k':'KC_FN0'};
+			keymap[4][7]={'k':'KC_RCTRL'};
+			ret.keymap=keymap;
+			return ret;
+		}
+	}
+}

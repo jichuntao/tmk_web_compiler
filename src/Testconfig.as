@@ -1,5 +1,8 @@
 package
 {
+	import model.ConfigManager;
+	import model.Utils;
+
 	public class Testconfig
 	{
 		public function Testconfig()
@@ -90,10 +93,10 @@ package
 			]};
 			matrix[4]=[];
 			matrix[4][0]={'m':5,'w':15,'s':[
-				[{'w':1.25,'r':4,'c':0},{'w':1.25,'r':4,'c':1},{'w':1.25,'r':4,'c':2},{'w':6.25,'r':4,'c':4,'n':5},{'w':1.25,'r':4,'c':10},{'w':1.25,'r':4,'c':11},{'w':1.25,'r':4,'c':12},{'w':1.25,'r':4,'c':13}],
-				[{'w':1.5,'r':4,'c':0},{'w':1,'r':4,'c':1},{'w':1.5,'r':4,'c':2},{'w':7,'r':4,'c':4,'n':5},{'w':1.5,'r':4,'c':11},{'w':1,'r':4,'c':12},{'w':1.5,'r':4,'c':13}],
-				[{'w':1.5,'r':4,'c':0},{'w':1,'r':4,'c':1,'n':1},{'w':1.5,'r':4,'c':2},{'w':7,'r':4,'c':4,'n':5},{'w':1.5,'r':4,'c':11},{'w':1,'r':4,'c':12,'n':1},{'w':1.5,'r':4,'c':13}],
-				[{'w':1.5,'r':4,'c':0,'n':1},{'w':1,'r':4,'c':1},{'w':1.5,'r':4,'c':2},{'w':7,'r':4,'c':4,'n':5},{'w':1.5,'r':4,'c':11},{'w':1.5,'r':4,'c':12},{'w':1.5,'r':4,'c':13,'n':1}]
+				[{'w':1.25,'r':4,'c':0},{'w':1.25,'r':4,'c':1},{'w':1.25,'r':4,'c':2},{'w':6.25,'r':4,'c':4},{'w':1.25,'r':4,'c':10},{'w':1.25,'r':4,'c':11},{'w':1.25,'r':4,'c':12},{'w':1.25,'r':4,'c':13}],
+				[{'w':1.5,'r':4,'c':0},{'w':1,'r':4,'c':1},{'w':1.5,'r':4,'c':2},{'w':7,'r':4,'c':4},{'w':1.5,'r':4,'c':11},{'w':1,'r':4,'c':12},{'w':1.5,'r':4,'c':13}],
+				[{'w':1.5,'r':4,'c':0},{'w':1,'r':4,'c':1,'n':1},{'w':1.5,'r':4,'c':2},{'w':7,'r':4,'c':4},{'w':1.5,'r':4,'c':11},{'w':1,'r':4,'c':12,'n':1},{'w':1.5,'r':4,'c':13}],
+				[{'w':1.5,'r':4,'c':0,'n':1},{'w':1,'r':4,'c':1},{'w':1.5,'r':4,'c':2},{'w':7,'r':4,'c':4},{'w':1.5,'r':4,'c':11},{'w':1,'r':4,'c':12},{'w':1.5,'r':4,'c':13,'n':1}]
 			]};
 			config.matrix=matrix;
 			trace(JSON.stringify(config));
@@ -102,7 +105,8 @@ package
 		public static function getDefaultData():Object
 		{
 			var ret:Object={};
-			ret.split=[0,0,0,0,0];
+			ret.layout=[0,0,0,0,0];
+			ret.layers=[]; 
 			var keymap:Array=[];
 			keymap[0]=[];
 			keymap[0][0]={'k':'KC_ESC'};
@@ -172,10 +176,155 @@ package
 			keymap[4][3]={'k':'KC_SPC'};
 			keymap[4][4]={'k':'KC_RALT'};
 			keymap[4][5]={'k':'KC_RGUI'};
-			keymap[4][6]={'k':'KC_FN0'};
+			keymap[4][6]={'k':'KC_FN','fnData':Utils.clone(ConfigManager.fnTypeList[1])};
 			keymap[4][7]={'k':'KC_RCTRL'};
-			ret.keymap=keymap;
+			ret.layers[0]=keymap;
+			keymap=[];
+			keymap[0]=[];
+			keymap[0][0]={'k':'KC_GRV'};
+			keymap[0][1]={'k':'KC_F1'};
+			keymap[0][2]={'k':'KC_F2'};
+			keymap[0][3]={'k':'KC_F3'};
+			keymap[0][4]={'k':'KC_F4'};
+			keymap[0][5]={'k':'KC_F5'};
+			keymap[0][6]={'k':'KC_F6'};
+			keymap[0][7]={'k':'KC_F7'};
+			keymap[0][8]={'k':'KC_F8'};
+			keymap[0][9]={'k':'KC_F9'};
+			keymap[0][10]={'k':'KC_F10'};
+			keymap[0][11]={'k':'KC_F11'};
+			keymap[0][12]={'k':'KC_F12'};
+			keymap[0][13]={'k':'KC_DEL'};
+			
+			keymap[1]=[];
+			keymap[1][0]={'k':''};
+			keymap[1][1]={'k':''};
+			keymap[1][2]={'k':'KC_UP'};
+			keymap[1][3]={'k':''};
+			keymap[1][4]={'k':''};
+			keymap[1][5]={'k':''};
+			keymap[1][6]={'k':'KC_CALC'};
+			keymap[1][7]={'k':''};
+			keymap[1][8]={'k':'KC_INS'};
+			keymap[1][9]={'k':''};
+			keymap[1][10]={'k':'KC_PSCR'};
+			keymap[1][11]={'k':'KC_SLCK'};
+			keymap[1][12]={'k':'KC_PAUS'};
+			keymap[1][13]={'k':''};
+			
+			keymap[2]=[];
+			keymap[2][0]={'k':''};
+			keymap[2][1]={'k':'KC_LEFT'};
+			keymap[2][2]={'k':'KC_DOWN'};
+			keymap[2][3]={'k':'KC_RGHT'};
+			keymap[2][4]={'k':''};
+			keymap[2][5]={'k':''};
+			keymap[2][6]={'k':''};
+			keymap[2][7]={'k':''};
+			keymap[2][8]={'k':''};
+			keymap[2][9]={'k':''};
+			keymap[2][10]={'k':'KC_HOME'};
+			keymap[2][11]={'k':'KC_PGUP'};
+			keymap[2][12]={'k':''};
+			
+			keymap[3]=[];
+			keymap[3][0]={'k':''};
+			keymap[3][1]={'k':''};
+			keymap[3][2]={'k':'KC_APP'};
+			keymap[3][3]={'k':'KC_LED_IN'};
+			keymap[3][4]={'k':'KC_LED_TOGGLE'};
+			keymap[3][5]={'k':'KC_LED_DE'};
+			keymap[3][6]={'k':'KC_VOLD'};
+			keymap[3][7]={'k':'KC_VOLU'};
+			keymap[3][8]={'k':'KC_MUTE'};
+			keymap[3][9]={'k':'KC_END'};
+			keymap[3][10]={'k':'KC_PGDN'};
+			keymap[3][11]={'k':''};
+			
+			keymap[4]=[];
+			keymap[4][0]={'k':''};
+			keymap[4][1]={'k':''};
+			keymap[4][2]={'k':''};
+			keymap[4][3]={'k':'KC_FN','fnData':{'action':'ACTION_LAYER_ON','args':[2,1],'type':2}};
+			keymap[4][4]={'k':''};
+			keymap[4][5]={'k':''};
+			keymap[4][6]={'k':''};
+			keymap[4][7]={'k':''};
+			ret.layers[1]=keymap;
+			keymap=[];
+			keymap[0]=[];
+			keymap[0][0]={'k':''};
+			keymap[0][1]={'k':''};
+			keymap[0][2]={'k':''};
+			keymap[0][3]={'k':''};
+			keymap[0][4]={'k':''};
+			keymap[0][5]={'k':''};
+			keymap[0][6]={'k':''};
+			keymap[0][7]={'k':'KC_P7'};
+			keymap[0][8]={'k':'KC_P8'};
+			keymap[0][9]={'k':'KC_P9'};
+			keymap[0][10]={'k':''};
+			keymap[0][11]={'k':'KC_PMNS'};
+			keymap[0][12]={'k':''};
+			keymap[0][13]={'k':''};
+			
+			keymap[1]=[];
+			keymap[1][0]={'k':''};
+			keymap[1][1]={'k':''};
+			keymap[1][2]={'k':''};
+			keymap[1][3]={'k':''};
+			keymap[1][4]={'k':''};
+			keymap[1][5]={'k':''};
+			keymap[1][6]={'k':''};
+			keymap[1][7]={'k':'KC_P4'};
+			keymap[1][8]={'k':'KC_P5'};
+			keymap[1][9]={'k':'KC_P6'};
+			keymap[1][10]={'k':''};
+			keymap[1][11]={'k':'KC_PENT'};
+			keymap[1][12]={'k':''};
+			keymap[1][13]={'k':''};
+			
+			keymap[2]=[];
+			keymap[2][0]={'k':''};
+			keymap[2][1]={'k':''};
+			keymap[2][2]={'k':''};
+			keymap[2][3]={'k':''};
+			keymap[2][4]={'k':''};
+			keymap[2][5]={'k':''};
+			keymap[2][6]={'k':''};
+			keymap[2][7]={'k':'KC_P1'};
+			keymap[2][8]={'k':'KC_P2'};
+			keymap[2][9]={'k':'KC_P3'};
+			keymap[2][10]={'k':'KC_PPLS'};
+			keymap[2][11]={'k':'KC_PAST'};
+			keymap[2][12]={'k':''};
+			
+			keymap[3]=[];
+			keymap[3][0]={'k':''};
+			keymap[3][1]={'k':''};
+			keymap[3][2]={'k':''};
+			keymap[3][3]={'k':''};
+			keymap[3][4]={'k':''};
+			keymap[3][5]={'k':''};
+			keymap[3][6]={'k':''};
+			keymap[3][7]={'k':'KC_P0'};
+			keymap[3][8]={'k':'KC_PCMM'};
+			keymap[3][9]={'k':'KC_PDOT'};
+			keymap[3][10]={'k':'KC_PSLS'};
+			keymap[3][11]={'k':''};
+			
+			keymap[4]=[];
+			keymap[4][0]={'k':''};
+			keymap[4][1]={'k':''};
+			keymap[4][2]={'k':''};
+			keymap[4][3]={'k':'KC_FN','fnData':{'action':'ACTION_LAYER_OFF','args':[2,1],'type':2}};
+			keymap[4][4]={'k':''};
+			keymap[4][5]={'k':''};
+			keymap[4][6]={'k':''};
+			keymap[4][7]={'k':''};
+			ret.layers[2]=keymap;
 			return ret;
 		}
+		
 	}
 }
